@@ -95,6 +95,13 @@ header .container {
     border: 3px solid #ffffff; /* Adds a clean white frame ring boundary around your circular photo */
 }
 
+.portfolio-pic {
+    max-width: 500px;     /* Prevents it from being huge on desktop screens */
+    width: 100%;          /* Makes it shrink perfectly on mobile screens */
+    height: auto;         /* Keeps the correct proportions */
+    border-radius: 8px;   /* Slightly rounds the sharp corners */
+}
+
 .subtitle {
     font-size: 1.25rem;
     color: #475569;
