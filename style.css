@@ -1,125 +1,158 @@
-/* Base Styles */
+/* ==========================================
+   1. GLOBAL & BASE STYLES
+   ========================================== */
+
+/* The '*' target applies these baseline resets to every single element on the page */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    scroll-behavior: smooth;
+    margin: 0;             /* Removes default spacing around elements */
+    padding: 0;            /* Removes default internal padding */
+    box-sizing: border-box; /* Forces layout borders and padding to fit inside the element's total width/height */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Smooth, modern system fonts */
+    scroll-behavior: smooth; /* Creates a smooth sliding animation when clicking menu links */
 }
 
+/* Base colors and text settings for the entire page background */
 body {
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
+    background-color: #f8fafc; /* Soft off-white canvas color */
+    color: #1e293b;            /* Dark slate gray color for high-contrast, comfortable text reading */
+    line-height: 1.6;          /* Adds breathing room between lines of text */
 }
 
+/* Reusable structural wrapper that keeps content centered with max limits on large screens */
 .container {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
+    margin: 0 auto;        /* Auto-calculates equal left/right margins to lock layout directly in the center */
+    padding: 4rem 2rem;    /* Generous top/bottom padding to give structural sections breathing room */
 }
 
-/* Header & Nav */
+
+/* ==========================================
+   2. HEADER & NAVIGATION BAR
+   ========================================== */
 header {
     background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle, faint bottom shadow line */
+    position: sticky;       /* Keeps the menu locked to the screen while you scroll */
+    top: 0;                 /* Pins sticky placement directly to the top edge of the window */
+    z-index: 100;           /* Sets high layering value so text doesn't bleed on top of the menu while scrolling */
 }
 
+/* Inline adjustments for the container code inside the nav menu wrapper */
 header .container {
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1rem 2rem;     /* Shorter vertical padding to keep the navbar thin and compact */
+    display: flex;          /* Activates Flexbox layout to distribute menu elements easily */
+    justify-content: space-between; /* Pushes the brand logo all the way left, and menu links all the way right */
+    align-items: center;    /* Keeps everything perfectly centered vertically */
 }
 
 .logo {
-    font-weight: 700;
+    font-weight: 700;       /* Heavy bold styling for the logo banner */
     font-size: 1.25rem;
     color: #0f172a;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+    display: flex;          /* Arranges bullet item lists side-by-side horizontally */
+    list-style: none;       /* Strips off default bullet points */
+    gap: 2rem;              /* Forces consistent spacing gaps between each individual link */
 }
 
 .nav-links a {
-    text-decoration: none;
+    text-decoration: none;  /* Standard text layout: removes default underlines */
     color: #475569;
     font-weight: 500;
 }
 
+/* Interactive link highlight triggered when dragging mouse cursor over text items */
 .nav-links a:hover {
-    color: #2563eb;
+    color: #2563eb;         /* Dynamically shifts the link color to a vibrant accent blue */
 }
 
-/* Hero Section */
-#hero {
-    text-align: center;
-    padding: 8rem 2rem;
+
+/* ==========================================
+   3. HERO / ABOUT INTRO SECTION
+   ========================================== */
+#about {
+    text-align: center;     /* Aligns text headings, summaries, and buttons to the middle axis */
+    padding: 6rem 2rem;
 }
 
-#hero h1 {
-    font-size: 3rem;
+#about h1 {
+    font-size: 3rem;        /* Prominent header sizing for maximum impact */
     color: #0f172a;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;  /* Pushes the avatar picture down slightly */
+}
+
+/* Mask profile layout logic to round standard square uploads */
+.about-photo {
+    width: 180px;
+    height: 180px;          /* Height must equal width for a perfect layout matrix */
+    object-fit: cover;      /* Instructs the browser to scale your image uniformly without squeezing or stretching it */
+    border-radius: 50%;     /* This specific code is what chops the square file corners into a smooth circle */
+    margin: 0 auto 2rem;    /* First two values center it; 2rem pushes the subtitle text down */
+    display: block;         /* Blocks out its own standalone layout row to ensure alignment calculations work */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft perimeter shadow layer around the frame edge */
+    border: 3px solid #ffffff; /* Adds a clean white frame ring boundary around your circular photo */
 }
 
 .subtitle {
     font-size: 1.25rem;
     color: #475569;
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    max-width: 600px;       /* Limits the summary sentence line width so it doesn't stretch out too far on wide screens */
+    margin: 0 auto 2rem;    /* Auto handles alignment centering; 2rem separates it from the buttons */
 }
 
-/* Buttons */
+
+/* ==========================================
+   4. INTERACTIVE ACCENT BUTTONS
+   ========================================== */
 .cta-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Horizontally groups buttons centered side-by-side */
     gap: 1rem;
 }
 
+/* Common shared attributes inherited by both primary and secondary button types */
 .btn {
     padding: 0.75rem 1.5rem;
-    border-radius: 0.375rem;
+    border-radius: 0.375rem; /* Rounds off corner edges for a modern, approachable look */
     text-decoration: none;
     font-weight: 500;
 }
 
 .btn-primary {
-    background-color: #2563eb;
+    background-color: #2563eb; /* Theme accent blue color */
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #1d4ed8;
+    background-color: #1d4ed8; /* Slightly deeper blue variant for hover effect feedback */
 }
 
 .btn-secondary {
-    background-color: #e2e8f0;
+    background-color: #e2e8f0; /* Low-impact muted gray accent button */
     color: #0f172a;
 }
 
 .btn-secondary:hover {
-    background-color: #cbd5e1;
+    background-color: #cbd5e1; /* Deepens gray tint on hover state */
 }
 
-/* Sections General */
+
+/* ==========================================
+   5. SKILLS GRID BLOCK
+   ========================================== */
 h2 {
     font-size: 2rem;
     color: #0f172a;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid #e2e8f0; /* Underline dividers running underneath section title names */
     padding-bottom: 0.5rem;
 }
 
-/* Skills Grid */
 .skills-grid {
-    display: grid;
+    display: grid;          /* Activates modern CSS Grid alignment engines */
+    /* Automagically builds rows/columns depending on screen widths: cards wrap nicely when room runs out */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
@@ -136,9 +169,87 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* Projects Grid */
+
+/* ==========================================
+   6. WORK & RESEARCH EXPERIENCE LAYOUT
+   ========================================== */
+
+/* Applies structural formatting rules cleanly to both work and research display layout boxes */
+.experience-card, .research-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;    /* Spacing buffer that separates consecutive stack objects */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.experience-card h3, .research-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+    color: #0f172a;
+}
+
+.experience-location, .research-location {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0 0 15px 0;
+}
+
+/* Timeline tracking nodes: clusters multiple titles cleanly inside the same workplace box */
+.role-group {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #e2e8f0; /* Visual left vertical line linking your roles together */
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between; /* Positions the Job Title on the left, and Dates on the right */
+    flex-wrap: wrap;        /* Prevents overlapping on tiny mobile device glass layers */
+    margin-bottom: 8px;
+    gap: 0.5rem;
+}
+
+.role-title {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.role-date {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.experience-bullets, .research-bullets {
+    margin: 0 0 10px 20px; /* Leaves room to properly map structural tab indices */
+    padding: 0;
+}
+
+.experience-bullets li, .research-bullets li {
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+
+/* Skills tracking pills nested at the base of experience cards */
+.skills-used {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    background-color: #f1f5f9; /* Subtle off-white box wrapping tags */
+    color: #334155;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;  /* Trims the width down to wrap around the text precisely rather than stretching full-width */
+}
+
+
+/* ==========================================
+   7. INDEPENDENT PROJECTS STRUCTURE
+   ========================================== */
 .projects-grid {
     display: grid;
+    /* Grid setting explicitly tailored for wider display boxes (minimum 300 pixels per block slot) */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
@@ -148,13 +259,17 @@ h2 {
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* Creates smooth animation when the card glides upward on hover */
+    display: flex;
+    flex-direction: column;    /* Arranges elements inside the card vertically */
 }
 
+/* Creates a professional interactive lift effect when dragging pointer modules over elements */
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Shakes card matrix 5 pixels vertically north */
 }
 
+/* Individual accent framework tracking chips inside the portfolio grids */
 .project-tag {
     display: inline-block;
     background: #eff6ff;
@@ -164,7 +279,9 @@ h2 {
     border-radius: 0.25rem;
     margin: 0.5rem 0 1rem;
     font-weight: 500;
+    align-self: flex-start; /* Keeps the tag anchored to the left instead of blowing out full-width */
 }
+
 
 /* Contact & Footer */
 #contact {
@@ -172,16 +289,103 @@ h2 {
     background: white;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 3rem 2rem;
+    
+    /* NEW STYLES TO CENTER THE CONTAINER BOX VISUALLY */
+    max-width: 600px;  /* Limits how wide the contact box can stretch */
+    margin: 0 auto;    /* Centers the entire box on the screen */
 }
 
-#contact a {
-    color: #2563eb;
+
+/* ==========================================
+   8. FILE ATTACHMENTS & DOCUMENT BADGES (UPGRADED)
+   ========================================== */
+.project-resources {
+    margin-top: auto;             /* Forces deliverables grid down to the very base edge of the card alignment */
+    padding-top: 1.25rem;
+    border-top: 1px dashed #e2e8f0; /* Crisp structural separation boundary line */
+}
+
+/* Section descriptive mini header */
+.project-resources h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.8rem;
     font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;       /* Adds neat letter-spacing layout gaps */
 }
 
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: #64748b;
-    font-size: 0.9rem;
+/* File Badges wrapper engine */
+.resource-links {
+    display: flex;
+    flex-wrap: wrap;              /* Automatically handles responsive line wraps when space limits arise */
+    gap: 0.5rem;                  /* Clean geometric micro spacing gaps */
+    justify-content: flex-start;  /* Keeps documents left-aligned inside cards, matching text alignment */
+}
+
+/* Base style template for all clickable attachment blocks */
+.resource-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;                     /* Centers emoji symbols cleanly beside text labels */
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.375rem;      /* Smoothly rounded tag parameters */
+    background: #ffffff;          /* Flat pure white base tile canvas layer */
+    color: #334155;               /* Slate tone font profile */
+    border: 1px solid #cbd5e1;    /* Defined outline perimeter framework boundaries */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Slight elevation profile depth shadow */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Elegant hardware-accelerated snap hover scaling engine */
+}
+
+/* Interactive animations whenever pulling pointer arrays on files */
+.resource-item:hover {
+    transform: translateY(-2px);  /* Smooth physics lift reaction step */
+    background: #f8fafc;          /* Gentle brightness shift highlighting the active box layout */
+    border-color: #2563eb;        /* Pop accent theme highlighting the item card */
+    color: #2563eb;
+}
+
+/* ==========================================
+   OPTIONAL: DOCUMENT TYPE SPECIFIC COLORS
+   ========================================== */
+
+/* Automatically apply these class tweaks in your HTML if you want distinct colorful file tiles */
+
+/* Blue theme for CAD/Blueprints */
+.res-cad {
+    background: #eff6ff;
+    color: #1e40af;
+    border-color: #bfdbfe;
+}
+.res-cad:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+/* Green theme for Papers/Reports */
+.res-pdf {
+    background: #f0fdf4;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+.res-pdf:hover {
+    background: #16a34a;
+    color: #ffffff;
+    border-color: #16a34a;
+}
+
+/* Placeholder box style for missing asset documentation structures */
+.resource-item-coming {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #94a3b8;
+    background: #f1f5f9;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.375rem;
+    border: 1px dashed #cbd5e1;
 }

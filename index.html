@@ -3,91 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Biomedical Engineer Portfolio</title>
+    <title>Saba Khan | Biomedical Engineer Portfolio</title>
+    <!-- Links to your style.css file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- ==========================================
+         1. HEADER & NAVIGATION BAR
+         ========================================== -->
     <header>
         <nav class="container">
-            <div class="logo">Your Name</div>
+            <!-- Brand Logo Name -->
+            <div class="logo">Saba Khan</div>
+            <!-- Jump Menu Navigation Links (# corresponds to section IDs below) -->
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="container">
-        <h1>Hi, I'm Your Name</h1>
-        <p class="subtitle">Biomedical Engineer specializing in device design, data analysis, and prototyping.</p>
+    <!-- ==========================================
+         2. HERO / ABOUT INTRO SECTION
+         ========================================== -->
+    <section id="about" class="container">
+        <h1>Welcome to my page!</h1>
+        <!-- Your profile picture (automatically masked to a circle by style.css) -->
+        <img src="profile-picture.png" alt="Profile Picture of Saba Khan" class="about-photo">
+        <p class="subtitle">Hello, I am Saba. I am a biomedical engineer with 2+ years of experience specializing in project leadership, data analysis, and prototyping.</p>
+        <!-- Primary Actions / Resume Call-To-Action Buttons -->
         <div class="cta-buttons">
             <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="YOUR_RESUME_LINK.pdf" target="_blank" class="btn btn-secondary">Download Resume (PDF)</a>
+            <a href="Resume.pdf" target="_blank" class="btn btn-secondary">Download Resume (PDF)</a>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ==========================================
+         3. TECHNICAL SKILLS GRID SECTION
+         ========================================== -->
     <section id="skills" class="container">
-        <h2>Technical Core Skills</h2>
+        <h2>Technical Skills</h2>
+        <!-- Grid wrapper that dynamically changes rows/columns based on user screen sizes -->
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>CAD & Prototyping</h3>
-                <p>Fusion 360, SolidWorks, 3D Printing, Microfabrication</p>
+                <h3>Instrumentation & Testing</h3>
+                <p>Biomedical Instrumentation, Sensor Integration, Pressure and Fluidic Testing, Arduino, Prototype Troubleshooting</p>
             </div>
             <div class="skill-category">
-                <h3>Programming & Data</h3>
-                <p>Python, SQL, MATLAB, Minitab</p>
+                <h3>Data Analysis & Software</h3>
+                <p>Python, SQL, MATLAB, Minitab, Simulink</p>
             </div>
             <div class="skill-category">
-                <h3>Engineering & Testing</h3>
-                <p>Simulink, Arduino, Sensor Integration, Validation Testing</p>
+                <h3>CAD & Engineering Design</h3>
+                <p>Fusion 360, SolidWorks, AutoCAD</p>
+            </div>
+            <div class="skill-category">
+                <h3>Medical Device Engineering</h3>
+                <p>Device Characterization, Validation Testing, Prototype Assembly, Biomaterials</p>
+            </div>
+            <div class="skill-category">
+                <h3>Manufacturing & Fabrication</h3>
+                <p>Microfabrication, Photolithography, Laser Machining, Micro-CNC, 3D Printing</p>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ==========================================
+         4. WORK EXPERIENCE SECTION
+         ========================================== -->
+    <section id="experience" class="container">
+        <h2>Work Experience</h2>
+        <div class="experience-grid">
+            
+            <!-- Experience 1: Potomac Photonics (Multi-Role Card) -->
+            <div class="experience-card">
+                <h3>Potomac Photonics Inc</h3>
+                <p class="experience-location">Halethorpe, MD</p>
+                
+                <!-- Role A: Leadership / Tech Lead Role-->
+                <div class="role-group">
+                    <div class="role-header">
+                        <span class="role-title">R&D Project Engineer - Technical Lead</span>
+                        <span class="role-date">Jan 2024 - Aug 2024</span>
+                    </div>
+                    <ul class="experience-bullets">
+                        <li>Provided technical leadership for 3 medical device R&D programs.</li>
+                        <li>Contributed to the development of 5 biomedical device technologies.</li>
+                        <li>Coordinated cross-functional teams of 4-6 through project planning, experimental development, timeline management, and technical execution.</li>
+                        <li>Translated customer and internal technical requirements into engineering plans and design decisions.</li>
+                    </ul>
+                </div>
+
+                <!-- Role B: Regular Engineering Role-->
+                <div class="role-group">
+                    <div class="role-header">
+                        <span class="role-title">R&D Project Engineer</span>
+                        <span class="role-date">Sept 2022 - Dec 2023</span>
+                    </div>
+                    <ul class="experience-bullets">
+                        <li>Developed and Optimized microfabrication processes supporting medical device production.</li>
+                        <li>Analyzed QA/QC and production data to identify trends, troubleshoot manufacturing issues, and support engineering decisions.</li>
+                        <li>Designed custom fixtures for injection molding, tooling, and pressure/fluidic test stations to support process development.</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Tags Footer inside the card -->
+                <div class="skills-used">
+                    <strong>Key Skills:</strong> Project Management and Planning, Data Analysis, Technical Documentation, Microfabrication
+                </div>
+            </div>
+
+            <!-- Experience 2: MDE (Standard Card) -->
+            <div class="experience-card">
+                <h3>Maryland Department of the Environment</h3>
+                <div class="role-header">
+                    <span class="role-title">Regulatory and Compliance Engineer I</span>
+                    <span class="role-date">Jan 2022 - Sept 2022</span>
+                </div>
+                <p class="experience-location">Baltimore, MD</p>
+                <ul class="experience-bullets">
+                    <li>Reviewed engineering designs, technical documentation, and operational plans to evaluate regulatory compliance and technical requirements.</li>
+                </ul>
+                <div class="skills-used">
+                    <strong>Key Skills:</strong> Technical Documentation
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. RESEARCH EXPERIENCE SECTION
+         ========================================== -->
+    <section id="research" class="container">
+        <h2>Research Experience</h2>
+        <div class="research-grid">
+            
+            <!-- Research 1: NYU -->
+            <div class="research-card">
+                <h3>NYU Tandon School of Engineering</h3>
+                <div class="role-header">
+                    <span class="role-title">Graduate Research Engineer - Biomedical Device Development</span>
+                    <span class="role-date">Aug 2025 - May 2026</span>
+                </div>
+                <p class="experience-location">Brooklyn, NY</p>
+                <ul class="research-bullets">
+                    <li>Designed, fabricated, and experimentally validated a multi-layer anatomically accurate surrogate head system integrating skull geometry, biomaterials, embedded vasculature, and pressure sensing for biomechanical testing.</li>
+                    <li>Managed experimental datasets and technical documentation across complex testing workflows, and presented findings through weekly updates to the PI and periodic presentations to external clinical collaborators (neurosurgery), informing experimental design and validation.</li>
+                    <li>Performed blunt impact testing under elevated ICP conditions and developed computational models in MATLAB to analyze pressure-response relationships and predict biomechanical system behavior.</li>
+                </ul>
+                
+                <!-- File Download Links Row -->
+                <div class="project-resources">
+                    <h4>Project Deliverables:</h4>
+                    <div class="resource-links">
+                        <a href="Research Paper.pdf" target="_blank" class="resource-item">Research Paper (PDF)</a>
+                        <a href="Research Poster.pdf" target="_blank" class="resource-item">Research Poster (PDF)</a>
+                    </div>
+                </div>
+                <div class="skills-used">
+                    <strong>Key Skills:</strong> Data Analysis, Computational Modeling, 3D Modeling (Fusion 360), Laboratory Techniques, 3D Printing, Laser Machining
+                </div>
+            </div>
+
+            <!-- Research 2: UMBC -->
+            <div class="research-card">
+                <h3>UMBC, Center for Advanced Sensor Technology (CAST)</h3>
+                <div class="role-header">
+                    <span class="role-title">Undergraduate Research Assistant</span>
+                    <span class="role-date">Jan 2019 - Aug 2020</span>
+                </div>
+                <p class="experience-location">Halethorpe, MD</p>
+                <ul class="research-bullets">
+                    <li>Engineered cellulose acetate microfluidic devices through laser engraving, bonding, and fabrication techniques.</li>
+                    <li>Characterized polymer material properties to evaluate suitability for rapid microfluidic prototyping.</li>
+                </ul>
+                <div class="skills-used">
+                    <strong>Key Skills:</strong> Data Analysis, Material Study, Laboratory Techniques
+                </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+        6. INDEPENDENT PROJECTS SECTION
+        ========================================== -->
     <section id="projects" class="container">
         <h2>Featured Engineering Projects</h2>
         <div class="projects-grid">
             
-            <!-- Project 1 -->
+            <!-- Project 1: Patient-Specific Hip Implant Design -->
             <div class="project-card">
                 <h3>Patient-Specific Hip Implant Design</h3>
-                <p class="project-tag">Fusion 360 / Biomaterials</p>
+                <span class="project-tag">Fusion 360 / Biomaterials / MATLAB</span>
                 <p>Designed a hip implant utilizing patient-specific femoral anatomy derived from 3D models. Generated comprehensive 2D engineering drawings with GD&T specifications and evaluated biomaterial selection for anatomical alignment.</p>
+                
+                <!-- File Download Links Row (Safely grouped inside the card wrapper) -->
+                <div class="project-resources">
+                    <h4>Project Deliverables:</h4>
+                    <div class="resource-links">
+                        <a href="CAD Hip Implant 2D Drawings.pdf" target="_blank" class="resource-item">Hip Implant 2D Drawings (PDF)</a>
+                        <a href="Hip Implant 3D Design.f3d" target="_blank" class="resource-item">3D Drawing File</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 2: Neuronal Cell Blast Injury Apparatus -->
+            <div class="project-card">
+                <h3>Neuronal Cell Blast Injury Apparatus</h3>
+                <span class="project-tag">Fusion 360 / Biomaterials / MATLAB</span>
+                <p>Engineered a high-pressure simulation device to study cellular deformation under blast trauma. Designed structural components in Fusion360 and selected materials to withstand high-pressure loading.</p>
+                
+                <!-- Placeholder wrapper for files you are adding later -->
+                <div class="project-resources">
+                    <h4>Project Deliverables:</h4>
+                    <div class="resource-links">
+                        <a href="Blast Tube Project Final Presentation.pdf" target="_blank" class="resource-item">Design Presentation (PDF)</a>
+                        <a href="Full Assembled Design.f3z" target="_blank" class="resource-item">3D Drawing File</a>
+                        <a href="Blast Tube All 2D Drawings.pdf" target="_blank" class="resource-item">2D Drawings (PDF)</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: ECG Signal Acquisition & Processing Circuit -->
             <div class="project-card">
                 <h3>ECG Signal Acquisition & Processing Circuit</h3>
-                <p class="project-tag">Biomedical Instrumentation / Testing</p>
+                <span class="project-tag">Biomedical Instrumentation / Testing / MATLAB</span>
                 <p>Designed and built an ECG signal processing circuit featuring an instrumentation amplifier, low-pass filter, and notch filter to remove 60 Hz noise interference and optimize signal clarity.</p>
+
+                <!-- Placeholder wrapper for files you are adding later -->
+                <div class="project-resources">
+                    <h4>Project Deliverables:</h4>
+                    <div class="resource-links">
+                        <a href="ECG Paper.docx.pdf" target="_blank" class="resource-item">Paper (PDF)</a>
+                        <a href="ECG Slides.pdf" target="_blank" class="resource-item">Presentation</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Project 3 -->
+            <!-- Project 4: Bileaflet Mechanical Heart Valve Design & Fabrication -->
             <div class="project-card">
-                <h3>Biomechanical System Data Modeling</h3>
-                <p class="project-tag">Python / MATLAB</p>
-                <p>Developed computational models to analyze physiological pressure-response relationships and manage experimental datasets across complex testing validation workflows.</p>
-            </div>
+                <h3>Bileaflet Mechanical Heart Valve Design & Fabrication</h3>
+                <span class="project-tag">Fusion360 / Biomaterials</span>
+                <p>Designed a bileaflet mechanical heart valve based on physiological flow and pressure specifications. Fabricated a prototype while addressing design limitations and improving durability and performance.</p>
 
+                <!-- Placeholder wrapper for files you are adding later -->
+                <div class="project-resources">
+                    <h4>Project Deliverables:</h4>
+                    <div class="resource-links">
+                        <a href="Heart Valve Paper.pdf" target="_blank" class="resource-item">Paper (PDF)</a>
+                        <a href="Heart Valve Presentation.pdf" target="_blank" class="resource-item">Presentation</a>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ==========================================
+     7. CONTACT MODULE & FOOTER BOUNDARY
+     ========================================== -->
     <section id="contact" class="container">
-        <h2>Get In Touch</h2>
+        <h2>Connect with me!</h2>
         <p>I am currently open to opportunities in R&D, Clinical Engineering, and Project Management.</p>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        
+        <!-- Active email link launcher -->
+        <p>Email: <a href="mailto:skhansabir99@gmail.com">skhansabir99@gmail.com</a></p>
+        
+        <!-- Security friendly out-link opener to LinkedIn Profile -->
+        <p>LinkedIn: <a href="www.linkedin.com/in/saba-khan-479ba5140" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/saba-khan-479ba5140</a></p>
     </section>
-
+    
     <footer>
-        <p>&copy; 2026 Your Name. Coded from scratch.</p>
+        <p>&copy; 2026 Saba Khan. Coded from scratch.</p>
     </footer>
 
 </body>
