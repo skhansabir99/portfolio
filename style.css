@@ -85,8 +85,8 @@ header .container {
 
 /* Mask profile layout logic to round standard square uploads */
 .about-photo {
-    width: 180px;
-    height: 180px;          /* Height must equal width for a perfect layout matrix */
+    width: 200px;
+    height: 200px;          /* Height must equal width for a perfect layout matrix */
     object-fit: cover;      /* Instructs the browser to scale your image uniformly without squeezing or stretching it */
     border-radius: 50%;     /* This specific code is what chops the square file corners into a smooth circle */
     margin: 0 auto 2rem;    /* First two values center it; 2rem pushes the subtitle text down */
