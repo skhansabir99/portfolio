@@ -3,77 +3,85 @@
    ========================================== */
 
 /* ========================================== 1. GLOBAL & BASE STYLES ========================================== */
-/* The '*' target applies these baseline resets to every single element on the page */
 * {
-    margin: 0;             /* Removes default spacing around elements */
-    padding: 0;            /* Removes default internal padding */
-    box-sizing: border-box; /* Forces layout borders and padding to fit inside the element's total width/height */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Smooth, modern system fonts */
-    scroll-behavior: smooth; /* Creates a smooth sliding animation when clicking menu links */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Base colors and text settings for the entire page background - UPDATED FOR DARK THEME */
+/* THE PAGE IS LIGHT: Bright and clean background layout */
 body {
-    background-color: #0f172a; /* Deep, expensive-looking midnight slate blue/black */
-    color: #e2e8f0;            /* Soft, bright silver-white for easy reading */
-    line-height: 1.6;          /* Adds breathing room between lines of text */
+    background-color: #f8fafc; /* Clean, soft light canvas */
+    color: #1e293b;            /* Dark slate text for high contrast reading */
+    line-height: 1.8;
 }
 
-/* Reusable structural wrapper that keeps content centered with max limits on large screens */
 .container {
     max-width: 1000px;
-    margin: 0 auto;        /* Auto-calculates equal left/right margins to lock layout directly in the center */
-    padding: 4rem 2rem;    /* Generous top/bottom padding to give structural sections breathing room */
+    margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
 /* ========================================== 2. HEADER & NAVIGATION BAR ========================================== */
+/* ONLY THE HEADER IS DARK: Premium midnight slate header block */
 header {
-    background-color: #1e293b;        /* Slightly lighter slate to give the navbar depth against the body */
-    border-bottom: 1px solid #334155; /* Sharp structural accent line beneath the menu */
-    position: sticky;                 /* Keeps the menu locked to the screen while you scroll */
-    top: 0;                           /* Pins sticky placement directly to the top edge of the window */
-    z-index: 100;                     /* Sets high layering value so text doesn't bleed on top of the menu while scrolling */
+    background-color: #0f172a;        /* Deep midnight dark background for the header only */
+    border-bottom: 1px solid #1e293b; /* Subtle dark boundary line */
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* Inline adjustments for the container code inside the nav menu wrapper */
 header .container {
-    padding: 1rem 2rem;       /* Shorter vertical padding to keep the navbar thin and compact */
-    display: flex;            /* Activates Flexbox layout to distribute menu elements easily */
-    justify-content: space-between; /* Pushes the brand logo all the way left, and menu links all the way right */
-    align-items: center;      /* Keeps everything perfectly centered vertically */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Update your logo styles */
+/* Pure white logo name so it stands out on the dark header */
 .logo {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.4rem;        /* Makes your name larger and prominent */
-    font-weight: 800;          /* Ultra bold look */
-    color: #ffffff;            /* Crisp pure white so your name pops out */
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff; 
     letter-spacing: -0.5px;
 }
 
-/* Update your navigation link items */
+/* FORCES LINKS HORIZONTAL: Clean inline row alignment */
+.nav-links {
+    display: flex;          /* This forces the menu items to sit side-by-side */
+    list-style: none;       /* Removes any bullet points from the list */
+    gap: 15px;              /* Adds clean horizontal spacing between options */
+    margin: 0;
+    padding: 0;
+}
+
+/* Bright silver links that fit the dark header vibe */
 .nav-links a {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.05rem;        /* Makes the menu links slightly bigger and readable */
-    font-weight: 600;          /* Semi-bold text weights */
-    color: #94a3b8;            /* Elegant muted silver gray for navigation links */
-    text-decoration: none;     /* Removes underlining */
-    transition: color 0.2s ease; /* Smooth hover transition */
-    padding: 8px 12px;         /* Adds a clickable buffer area around links */
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #cbd5e1;         /* Light silver-gray so it is legible on the dark menu */
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 6px 10px;
 }
 
-/* Adds a sleek interaction when a recruiter hovers over the links */
+/* Bright electric blue highlight when a recruiter hovers over a link */
 .nav-links a:hover {
-    color: #38bdf8;            /* Bright electric blue pop when a recruiter hovers over menu items */
+    color: #38bdf8; 
 }
 
-/* ⚠️ FORCED ACCENT CORRECTIONS FOR INLINE TEXT */
-#about p, #about span {
-    color: #cbd5e1 !important; /* Forces your biography body text to be light and readable */
+/* ========================================== 3. CONTENT RESETS ========================================== */
+/* Guarantees that everything in your main light body reads correctly */
+#about p, #about span, .minimal-callout-block p {
+    color: #334155 !important; /* Elegant slate gray text */
 }
 #about strong {
-    color: #ffffff !important; /* Makes bold labels like "Focus Areas:" pop out in pure white */
+    color: #0f172a !important; /* Bold headers stand out in crisp dark charcoal */
 }
 
 
